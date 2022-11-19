@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+            /* 
+            选择器：id：100  class：10 标签：1
+            ●  基础选择器[掌握] 
+                ○ 标签选择器 通过标签名定位标签
+                ○ id选择器  通过标签的id属性定位标签
+                ○ class选择器 通过标签的class属性定位标签
+                ○ 通用 *
+            ●  复合选择器 
+                ○ 后代选择器   E1  E2
+                ○ 子元素选择器 E1 > E2
+                ○ 并集选择器   E1, E2, E3, ... 
+            */
+            /* 定位id值是div1的标签 */
+            #div1{
+                color:red
+            }
+            /* 定位class值是blue的标签 */
+            .blue{
+                color:blue;
+                font-size: 25px;
+            }
+            /* *通配符表示页面中的所有标签，不常用 */
+            /* *{
+               padding: 0;margin: 0; 
+            } */
+
+            /* 后代选择器   E1  E2 */
+            #div2 span{
+                color:gold;
+            }
+
+            /* 子元素选择器 E1 > E2 */
+            #div2 > span{
+                font-size: 30px;
+            }
+
+            p > span{
+                font-size: 30px;
+            }
+
+            /* 并集选择器   E1, E2, E3, ...  同时定位多个标签*/
+            div, span, p, ol, li{
+                margin: 0;
+                padding: 0;
+            }
+
+            ul.blue{
+                color:green;
+            }
+    </style>
+</head>
+<body>
+    <!-- 一般页面中的id值不重复，唯一 -->
+    <div id='div1'>
+        <span>span4</span>
+    </div>
+
+    <ul class="blue">
+        <li>python</li>
+        <li>mysql</li>
+    </ul>
+
+    <ol class="blue">
+        <li>git</li>
+        <li>pip</li>
+    </ol>
+
+    <div id="div2">
+        <p>
+            <b>加粗</b>
+            <span>span1</span>
+        </p>
+        <span>span3</span>
+    </div>
+    <span>span2</span>
+</body>
+</html>
