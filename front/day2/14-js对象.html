@@ -21,9 +21,41 @@
     console.log(Math.max(1, 2, 3))
     console.log(Math.min(1, 2, 3))
     console.log(Math.floor(11.5))
-
+    console.log('=================')
 
     // 自定义对象
+    // 字面量方式[常用]
+    var obj1 = {
+      // 属性
+      name: 'hello',
+      age: 18,
+
+      // 方法
+      eat: function () {
+        // 访问对象属性
+        // this:指向当前对象，类似于python中的self  
+        console.log(this.name)
+        console.log(this.age)
+      }
+    }
+
+    console.log(obj1.name)
+    obj1.eat()
+    console.log('============')
+
+    // 构造函数方式
+    var obj2 = new Object()
+    // 属性
+    obj2.name = 'good'
+    obj2.age = 19
+
+    // 方法
+    obj2.run = function () {
+      console.log(this.name)
+      console.log(this.age)
+    }
+
+    obj2.run()
 
   </script>
 </body>
